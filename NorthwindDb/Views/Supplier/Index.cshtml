@@ -1,0 +1,27 @@
+﻿@model List<Supplier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tedarikçilerimiz</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var supplier in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+
+                    <h5>Şirket Adı:  @supplier.CompanyName</h5>
+                    <span>Adresi: @supplier.Address</span>                   
+                    <span>İletişim Sorumlusu: @supplier.ContactName</span>
+                    <span>İletişim numarası: @supplier.Phone</span>
+
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>

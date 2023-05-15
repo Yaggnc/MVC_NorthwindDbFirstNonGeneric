@@ -1,0 +1,19 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "CreateCategory";
+}
+
+<h1>CreateCategory</h1>
+<form method="post" class="form-check " asp-action="CreateCategory" asp-controller="Category">
+    <div>
+        <input class="mb-2" type="text" asp-for="CategoryName" placeholder="Kategori Adı giriniz" ></input>
+    </div>
+
+    <div>
+        <input class="mb-2" type="text" asp-for="Description" placeholder="Açıklama">Açıklama giriniz</input>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Ekle</button>
+    </div>
+</form>

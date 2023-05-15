@@ -1,0 +1,25 @@
+﻿@model List<Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Kategoriler</h1>
+<hr/>
+<div class="container">
+    <div class="row">
+        <a class="btn btn-primary mb-2" asp-action="CreateCategory" asp-controller="Category">Yeni Kategori Ekle</a>
+        @foreach (Category category in Model)
+        {
+           <div class="col-md-3 mb-2">
+               <div class="card">
+                   <h4>@category.CategoryName</h4>
+                   <p>Açıklama: @category.Description</p>
+                   <a class="btn btn-warning mb-1 " asp-action="UpdateCategory" asp-controller="Category" asp-route-id="@category.CategoryId">Güncelle</a>
+                   <a class="btn btn-danger" asp-action="DeleteCategory" asp-controller="Category" asp-route-id="@category.CategoryId">Sil</a>
+               </div>
+           </div>
+        }
+        
+    </div>
+</div>

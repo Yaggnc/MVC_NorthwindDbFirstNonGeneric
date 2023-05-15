@@ -1,0 +1,25 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "CreateEmployee";
+}
+
+<h1>CreateEmployee</h1>
+
+<form method="post" class="form-check" asp-action="CreateEmployee" asp-controller="Employee">
+    <div>
+        <input class="mb-2" type="text" asp-for="FirstName" placeholder="Çalışan İsmini girin:"></input>
+    </div>
+    <div>
+        <input class="mb-2" type="text" asp-for="LastName" placeholder="Çalışan Soyadı girin:"></input>
+    </div>
+    <div>
+        <input class="mb-2" type="text" asp-for="Address" placeholder="Çalışan Adresi Girin:"></input>
+    </div>
+    <div>
+        <input class="mb-2" type="text" asp-for="City" placeholder="Çalışanın Yaşadığı Şehir:"></input>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Ekle</button>
+    </div>
+</form>

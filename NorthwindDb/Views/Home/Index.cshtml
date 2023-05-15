@@ -1,0 +1,27 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<hr>
+<h1>Ana Sayfa</h1>
+<hr>
+
+<div class="container">
+    <div class="row">      
+        @foreach (var product in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card bg-secondary" >
+                    <h5>Ürün Adı: @product.ProductName</h5>
+                    <span>Ürün Fiyatı: @product.UnitPrice</span>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+    
+
+

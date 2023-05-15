@@ -1,0 +1,23 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "UpdateCategory";
+}
+
+<h1>UpdateCategory</h1>
+
+<form class="form-control" method="post" asp-action="UpdateCategory" asp-controller="Category">
+    <input type="hidden" asp-for="CategoryId" />
+
+    <div>
+       <input type="text" asp-for="CategoryName" placeholder="Yeni Kategori ismi" />
+    </div>
+
+    <div>
+        <input type="text" asp-for="Description" placeholder="Yeni Açıklama"/>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </div>
+</form>

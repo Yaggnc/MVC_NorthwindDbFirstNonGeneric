@@ -1,0 +1,30 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "UpdateEmployee";
+}
+
+<h1>UpdateEmployee</h1>
+<hr></hr>
+<form class="form-control" asp-action="UpdateEmployee" asp-controller="Employee">
+    <input type="hidden" asp-for="EmployeeId"></input>
+    <div>
+        <input type="text" asp-for="FirstName" placeholder="Yeni Kategori İsmi">        
+    </div>
+
+    <div>
+        <input type="text" asp-for="LastName" placeholder="Soyad:"></input>
+    </div>
+
+    <div>
+        <input asp-for=Address type="text" placeholder="Adres:"></input>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Şehir:" asp-for="City"></input>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </div>
+</form>

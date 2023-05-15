@@ -1,0 +1,29 @@
+﻿@model List<Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Çalışanlarımız</h1>
+<hr></hr>
+<div class="container">
+    <div class="row">
+        <a class="btn btn-primary mb-1" asp-action="CreateEmployee" asp-controller="Employee">Yeni Çalışan Ekle</a>
+        @foreach (var employee in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <h5>Çalışan Adı: @employee.FirstName @employee.LastName</h5>
+                    <span>Adresi: @employee.Address</span>
+                    <span>Şehir: @employee.City</span>
+                    <a class="btn btn-warning mb-1" asp-action="UpdateEmployee" asp-controller="Employee" asp-route-id="@employee.EmployeeId">
+                        Güncelle
+                    </a>
+                    <a class="btn btn-danger" asp-action="DeleteEmployee" asp-controller="Employee" asp-route-id="@employee.EmployeeId">
+                        Sil
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
